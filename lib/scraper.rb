@@ -9,7 +9,7 @@ class Scraper
     students.each do |student|
       name = student.css('h4.student-name').text
       location = student.css('p.student-location').text
-      profile = student.css('a')['href']
+      profile = student.css('a')
       binding.pry
     end
   end
