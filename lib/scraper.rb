@@ -20,6 +20,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML(open(profile_url))
     social = doc.css('div.social-icon-container a')
+    binding.pry
     hash = {
       twitter: social[0]['href'],
       linkedin: social[1]['href'],
